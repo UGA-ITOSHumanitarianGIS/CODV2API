@@ -2,8 +2,8 @@
 COD Services for Common Operational Datasets used by Humanitarian Operations -API, Documentation, Progress and Issue tracking and Resources
 # Features
 This repository supports community development of Common Operational Datasets maintenance and availability among humanitarian groups using data visualizations, maps and applications. The platform as of 4 June 2021 is deployed to [production](https://apps.itos.uga.edu/CODV2API) and [beta](https://beta.itos.uga.edu/). The purpose of the COD Version 2 API is to streamline features of existing COD Services, further organize and enhance metadata and docmentation for the COD portfolio and enable access among more diverse platforms and use cases as the example shows:
+![alt text](https://apps.itos.uga.edu/CODV2API/Content/Ex2.png "COD API and Clients") 
 
-https://apps.itos.uga.edu/CODV2API/Content/Ex2.png
 
 the following illustrates an api call added to Microsoft Excel.
 
