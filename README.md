@@ -5,12 +5,12 @@ This repository supports community development of Common Operational Datasets ma
 
 ![alt text](https://apps.itos.uga.edu/CODV2API/Content/Ex2.png "COD API and Clients") 
 
-Check it out COD Services API live call results in Microsoft Excel:
+Check out COD Services API live call results in Microsoft Excel:
 
 ![alt text](https://apps.itos.uga.edu/CODV2API/Content/excel-ex.png "COD API Excel") 
 
 
-The gistaps services available in version 1 are supplemented with additional features for version and metadata information as well as vector tiles.  The data are live and updated frequently by partners. The foll
+The gistaps services available in version 1 are supplemented with additional features for version and metadata information as well as vector tiles.  The data are live and updated frequently by partners. 
 
 Viewing COD mapped features in context of humanitarian operational sectors is useful for planning response, supporting analysis and data reviews.
 
@@ -25,7 +25,7 @@ More information coming soon.
 ## User Documentation
 For more information on how to use the API or develop with it visit the [help](https://apps.itos.uga.edu/CODV2API/help). Check it out! There are sample calls here
 
-•	Download a vector tile admin level for the Democratic Republic of Congo [https://apps.itos.uga.edu/CODV2API/api/v1/themes/cod-ab/locations/COD/versions/current/vectortiles/1] (https://apps.itos.uga.edu/CODV2API/api/v1/themes/cod-ab/locations/COD/versions/current/vectortiles/1)
+•	Download a vector tile admin level for the Democratic Republic of Congo (https://apps.itos.uga.edu/CODV2API/api/v1/themes/cod-ab/locations/COD/versions/current/vectortiles/1)
 
 •	Acess Metadata: https://apps.itos.uga.edu/CODV2API/api/v1/themes/cod-ab/locations/COD
 
