@@ -9,7 +9,7 @@ Check out COD Services API live call results in Microsoft Excel:
 
 ![alt text](https://apps.itos.uga.edu/CODV2API/Content/excel-ex.png "COD API Excel") 
 
-And -- the purpose of [CODs](https://cod.unocha.org) through the stewardship at the United Nations Office for the Coordination of Humanitarian Affairs (UN OCHA): Integrating COD datasets featuring mapping capability in context of humanitarian operational sectors is useful for planning response, supporting analysis and data reviews...and monitoring outcomes.
+And -- the purpose of [CODs](https://cod.unocha.org) through the stewardship at the United Nations Office for the Coordination of Humanitarian Affairs (UN OCHA): Integrating COD datasets featuring mapping capability in context of humanitarian operational sectors is useful for planning disaster response, supporting analysis and data reviews...and monitoring outcomes.
 
 The [gismaps](https://gistmaps.itos.uga.edu/arcgis/rest/services/cod-external) ArcGIS services available in version 1 that suppored humanitarian COD uses are supplemented with additional features for version and metadata information as well as vector tiles in this project. The data are live and updated frequently by partners. A data model and more usage examples may be found in the project wiki.
 
