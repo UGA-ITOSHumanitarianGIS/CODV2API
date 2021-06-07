@@ -28,7 +28,7 @@ For more information on how to use the API or develop with it visit the [help](h
 
 •	Download a vector tile admin level for the Democratic Republic of Congo (https://apps.itos.uga.edu/CODV2API/api/v1/themes/cod-ab/locations/COD/versions/current/vectortiles/1)
 
-•	Acess Metadata: https://apps.itos.uga.edu/CODV2API/api/v1/themes/cod-ab/locations/COD
+•	Access Metadata: https://apps.itos.uga.edu/CODV2API/api/v1/themes/cod-ab/locations/COD
 
 •	Get Gazeteer information based on geographic coordinates: https://apps.itos.uga.edu/CODV2API/api/v1/Themes/cod-ab/Lookup/latlng?latlong=-8.89,24.98&wkid=4326&level=2
 
