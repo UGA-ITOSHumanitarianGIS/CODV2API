@@ -38,7 +38,7 @@ For more information on how to use the API or develop with it visit the [help](h
 
 • United Nations Office for the Coordination of Humanitarian Affairs
 
-• United Nations and NGO partners at GIS IMWG working group, United Federation of Red Cross, MapAction, OpenStreetMap and others.
+• United Nations and NGO partners.
 
 • University of Georgia, Carl Vinson Institute of Government, Information Technology Outreach Services Division
 
