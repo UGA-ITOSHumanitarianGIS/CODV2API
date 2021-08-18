@@ -27,6 +27,8 @@ More information coming soon.
 ## User Documentation
 For more information on how to use the API or develop with it visit the [help](https://apps.itos.uga.edu/CODV2API/help). Check it out! There are sample calls here
 
+•	Build applications and visualizations using hosted vector tile cod-ab. The help documentation showcases a Leaflet JSFiddle for Haiti (https://apps.itos.uga.edu/CODV2API/Help)
+
 •	Download a vector tile admin level for the Democratic Republic of Congo (https://apps.itos.uga.edu/CODV2API/api/v1/themes/cod-ab/locations/COD/versions/current/vectortiles/1)
 
 •	Access Metadata: https://apps.itos.uga.edu/CODV2API/api/v1/themes/cod-ab/locations/COD
