@@ -1,5 +1,7 @@
 import pandas as pd
 import requests
+# Author: A. Bagodiya
+# Description: Calls COD Services API to bulk generate P-Code list in a spreadsheet for geo coordinate input spreadsheet.
 # To read the spreadsheet file
 filePath = "Location_Coordinates.xls"
 
