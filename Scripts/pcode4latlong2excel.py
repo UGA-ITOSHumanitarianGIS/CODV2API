@@ -76,6 +76,6 @@ def runit(valid):
     data=pd.DataFrame(file)
     data['admin2Pcode']=admin2PcodeList
     data.to_excel("output.xlsx")
-    print ("Done. Check the output here: " +  os.path.join(os.getcwd(), "CODServicesAPIbulkPcoder.log"))
+    print ("Done. Check the output here: " +  os.path.join(os.getcwd(), "CODServicesAPIbulkPcoder.log") + " and output.xlsx")
 if __name__ == "__main__":
     main()
