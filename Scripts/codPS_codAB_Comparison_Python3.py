@@ -21,9 +21,11 @@ countries = [["afg", "af", 1],["alb", "al", 1],["arg", "ar", 1],["arm", "am", 1]
              ["png", "pg", 3],["pol", "pl", 1],["pri", "pr", 1],["pse", "ps", 1],["rou", "ro", 2],["rwa", "rw", 3],["sen", "sn", 3],["sle", "sl", 3],["slv", "sv", 2],["stp", "st", 2],["sur", "sr", 2],["svk", "sk", 2],["swz", "sz", 1],["tca", "tc", 1],
              ["tcd", "td", 2],["tha", "th", 2],["ton", "to", 3],["tto", "tt", 1],["tza", "tz", 2],["uga", "ug", 2],["ukr", "ua", 1],["ury", "uy", 1],["uzb", "uz", 1],["vct", "vc", 2],["vgb", "vg", 1],["vir", "vi", 2],["vnm", "vn", 1],["vut", "vu", 2],
              ["zmb", "zm", 1],["zwe", "zw", 1]]
+
 finalList = []
 trueList = []
 falseList = []
+noCODPS = []
 i=0
 iterator = len(countries)
 iterator = iterator - 1
@@ -35,10 +37,12 @@ while i < iterator:
     if iso3 == "com":
         i += 1
         continue
-    url1 = "https://beta.itos.uga.edu/CODV2API/api/v1/themes/cod-ps/lookup/Get/"+str(admLvl)+"/aa/"+iso3
-    url2 = "https://beta.itos.uga.edu/CODV2API/api/v1/themes/cod-ab/lookup/"+str(admLvl)+"/"+iso2
+    #url1 = "https://beta.itos.uga.edu/CODV2API/api/v1/themes/cod-ps/lookup/Get/"+str(admLvl)+"/aa/"+iso3
+    url1 = "https://apps.itos.uga.edu/CODV2API/api/v1/themes/cod-ps/lookup/Get/"+str(admLvl)+"/aa/"+iso3
+    #url2 = "https://beta.itos.uga.edu/CODV2API/api/v1/themes/cod-ab/lookup/"+str(admLvl)+"/"+iso2
+    url2 = "https://apps.itos.uga.edu/CODV2API/api/v1/themes/cod-ab/lookup/"+str(admLvl)+"/"+iso2
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  
-    s.settimeout(120)
+    s.settimeout(1000)
     
     data = urllib.request.urlopen(url1, timeout=30).read()
     jsonData = json.loads(data.decode("utf-8"))
@@ -49,15 +53,20 @@ while i < iterator:
         statusString = "No Cod AB available"
         finalList.append(iso3)
     else:
-        if len(jsonData['data']) == len(jsonData2):
-            trueList.append(iso3)
-        else:
-            falseList.append([iso3,iso2,admLvl])
+        try:
+            if len(jsonData['data']) == len(jsonData2):
+                trueList.append(iso3)
+            else:
+                falseList.append([iso3,iso2,admLvl])
+        except:
+            noCODPS.append([iso3,iso2,admLvl])
     
     while admLvl > 1:
         admLvl = admLvl - 1
-        url1 = "https://beta.itos.uga.edu/CODV2API/api/v1/themes/cod-ps/lookup/Get/"+str(admLvl)+"/aa/"+iso3
-        url2 = "https://beta.itos.uga.edu/CODV2API/api/v1/themes/cod-ab/lookup/"+str(admLvl)+"/"+iso2
+        #url1 = "https://beta.itos.uga.edu/CODV2API/api/v1/themes/cod-ps/lookup/Get/"+str(admLvl)+"/aa/"+iso3
+        url1 = "https://apps.itos.uga.edu/CODV2API/api/v1/themes/cod-ps/lookup/Get/"+str(admLvl)+"/aa/"+iso3
+        #url2 = "https://beta.itos.uga.edu/CODV2API/api/v1/themes/cod-ab/lookup/"+str(admLvl)+"/"+iso2
+        url2 = "https://apps.itos.uga.edu/CODV2API/api/v1/themes/cod-ab/lookup/"+str(admLvl)+"/"+iso2
 
         data = urllib.request.urlopen(url1, timeout=30).read()
         jsonData = json.loads(data.decode("utf-8"))
@@ -68,10 +77,13 @@ while i < iterator:
             statusString = "No Cod AB available"
             finalList.append(iso3)
         else:
-            if len(jsonData['data']) == len(jsonData2):
-                trueList.append(iso3)
-            else:
-                falseList.append([iso3,iso2,admLvl])
+            try:
+                if len(jsonData['data']) == len(jsonData2):
+                    trueList.append(iso3)
+                else:
+                    falseList.append([iso3,iso2,admLvl])
+            except:
+                noCODPS.append([iso3,iso2,admLvl])
         
     print((iso3+" finished"))
     i += 1
@@ -83,4 +95,6 @@ unique(falseList)
 print("\n")
 print("Countries without a COD AB")
 unique(finalList)
+print("Countries without a COD PS")
+unique(noCODPS)
 
