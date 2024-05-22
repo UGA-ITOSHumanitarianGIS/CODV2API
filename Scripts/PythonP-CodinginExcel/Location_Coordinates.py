@@ -77,10 +77,10 @@ def runit(valid):
         URL = "https://apps.itos.uga.edu/CODV2API/api/v1/Themes/cod-ab/Lookup/latlng?latlong="+lat+","+long+"&wkid=4326&level=2"
         response=requests.get(URL).json() # To get the content from API
         log(long + ", " + lat)
-        admin2PcodeList.append(response[0]['admin2Pcode']) # To get the  specific admin2Pcode
+        admin2PcodeList.append(response[0]['ADM2_PCODE']) # To get the  specific admin2Pcode
 
     # To save the file
-    file['admin2Pcode']=admin2PcodeList
+    file['ADM2_PCODE']=admin2PcodeList
     file.to_excel(QF+"\Output.xlsx")
     print ("Done. Check the output here: " +  QF, "CODServicesAPIbulkPcoder.log" + " and output.xlsx")
     os.system("pause")
